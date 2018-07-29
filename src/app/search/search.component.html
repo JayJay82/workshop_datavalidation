@@ -1,0 +1,14 @@
+<form class="example-form">
+    <mat-form-field style="width:100%">
+      <input style="width: 100%" 
+      type="text" placeholder="search youtube videos"
+      aria-label="Number" matInput [formControl]="searchTerm" 
+      [matAutocomplete]="auto">
+      <mat-autocomplete (optionSelected)="itemSelected($event)" 
+       #auto="matAutocomplete">
+        <mat-option *ngFor="let item of searchResult" [value]="item.title">
+          {{ item.title }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>

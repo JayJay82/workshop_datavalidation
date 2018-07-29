@@ -1,0 +1,3 @@
+<ng-container *ngFor="let post of postList">
+     <app-post-item (delete)="deletePost($event)" [postElement]="post"></app-post-item>
+</ng-container>
